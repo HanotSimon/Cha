@@ -1,11 +1,14 @@
-function App() {
+import Navbar from "./components/Navbar/Navbar";
+import "./index.css";
+import Home from "./components/Home/Home"; // Styles globaux
 
-  return (
-    <>
-        <h1>Le site de cha est en construction</h1>
-        <h2>Oe oe oe je rajoute du texte pour l'exemple tavu</h2>
-    </>
-  )
-}
+const App = () => {
+    return (
+        <>
+            <Navbar />
+            <Home/>
+        </>
+    );
+};
 
-export default App
+export default App;
