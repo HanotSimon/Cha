@@ -1,0 +1,84 @@
+/* ===== Global Styles ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffe6f0; /* rose très clair */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff3366; /* rose vif pour le texte */
+}
+
+h1 {
+    color: #ff69b4;
+    text-align: center;
+    text-shadow: 1px 1px 3px #ffc0cb;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #ff4d94;
+    text-align: center;
+    text-shadow: 1px 1px 2px #ffb6c1;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 10px 20px;
+}
+
+a {
+    color: #ff66b2;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff1a75;
+    text-decoration: underline;
+}
+
+/* ===== Buttons Globaux ===== */
+button {
+    background: #ff4d94;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #ff1a75;
+    transform: scale(1.1);
+}
+
+/* ===== Containers ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== Formulaires ===== */
+input, textarea {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ff99c2;
+    margin: 5px 0;
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff4d94;
+    box-shadow: 0 0 5px #ff99c2;
+}
+
+/* ===== Petits détails cute ===== */
+.heart {
+    color: #ff1a75;
+    margin-left: 5px;
+}
