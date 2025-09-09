@@ -1,14 +1,15 @@
-import Navbar from "./components/Navbar/Navbar";
 import "./index.css";
-import Home from "./components/Home/Home"; // Styles globaux
+import HeartAnimation from "./components/HeartAnimation/HeartAnimation";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Home/HomePage";
 
-const App = () => {
+export default function App() {
     return (
-        <>
-            <Navbar />
-            <Home/>
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/heart" element={<HeartAnimation />} />
+            </Routes>
+        </Router>
     );
-};
-
-export default App;
+}
