@@ -7,7 +7,7 @@ export default function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<Navigate to="/heart" replace />} />
                 <Route path="/heart" element={<HeartAnimation />} />
             </Routes>
         </Router>
