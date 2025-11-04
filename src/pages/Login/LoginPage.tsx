@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./LoginPage.css";
+import loginVideo from "@/assets/login-background.mp4";
 
 const LoginPage = ({ onLogin }) => {
     const [answer, setAnswer] = useState("");
@@ -10,6 +11,9 @@ const LoginPage = ({ onLogin }) => {
 
     return (
         <div className="login-container">
+            <video autoPlay muted loop id="loginBackground">
+                <source src={loginVideo} type="video/mp4"/>
+            </video>
             <div className="login-card">
                 <h2>Code secret ?</h2>
                 <input

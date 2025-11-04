@@ -1,19 +1,36 @@
 .navbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    height: 60px;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: #ffb6c1; /* rose doux */
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 0 30px;
+    background: #fdfdfd; /* blanc doux */
+    border-radius: 20px; /* coins arrondis mais pas trop */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* ombre légère neutre */
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* léger effet au hover */
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 1px 1px 2px #ff69b4;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ff6f91; /* rose discret et doux */
+    letter-spacing: 0.5px;
+}
+
+.logo a {
+    text-decoration: none;
 }
 
 .nav-links {
@@ -24,15 +41,25 @@
 
 .nav-links li a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: #444;
+    font-weight: 500;
     padding: 6px 12px;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 .nav-links li a:hover {
-    background: #fff;
-    color: #ff69b4;
-    transform: scale(1.1);
+    background: #ffe4eb; /* pastel très léger */
+    color: #ff4d70; /* rose discret */
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 12px;
+    }
+    .navbar {
+        padding: 0 15px;
+    }
 }

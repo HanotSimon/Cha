@@ -1,27 +1,44 @@
 import "./HomePage.css"
 import Navbar from "../../components/Navbar/Navbar.tsx";
+import HeartAnimation from "@/components/HeartAnimation/HeartAnimation.tsx";
+import Calendar from "@/components/Calendar/Calendar.tsx";
+import GrowingFlower from "@/components/GrowingFlower/GrowingFlower.tsx";
+import FireFlies from "@/components/FireFlies/FireFlies.tsx";
+import Sky from "@/components/Sky/Sky.tsx";
+import Gallery from "@/components/Gallery/Gallery.tsx";
 
 const HomePage = () => {
     return (
         <>
+            <FireFlies/>
             <Navbar/>
             <div className="home">
                 <header>
                     <h1>Bienvenue sur ton site 🎉</h1>
                     <p>
-                        Ce site est un petit site cringe pour toi. Je l'ai officiellement
-                        commencé le 08/09 et fini le ... Je vais faire pleins de petits projets
-                        dessus et au fur et à mesure j'espère m'améliorer en code aussi.
+                        Ce site est un petit site cringe pour toi fait maison.
                     </p>
+                    <p>
+                        J'ai essayé de faire de mon mieux pour qu'il soit pas trop ignoble :)
+                    </p>
+
                 </header>
 
-                <section>
-                    <h2>Section 1</h2>
+                <HeartAnimation/>
+
+                <div className="calendar-wrapper">
+                    <Calendar/>
+                    <GrowingFlower/>
+                </div>
+
+                <div className="sky-wrapper">
+                    <Sky/>
+                </div>
+
+                <section id="galery">
+                    <Gallery/>
                 </section>
 
-                <section>
-                    <h2>Section 2</h2>
-                </section>
             </div>
         </>
     )

@@ -1,0 +1,23 @@
+.flower-wrapper {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.flower-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* plus long pour crossfade */
+}
+
+.flower-image.active {
+    opacity: 1;
+    transform: scale(1.05);
+}

@@ -1,0 +1,227 @@
+.sky {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    transition: background 1s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 🌤️ CIEL JOUR / NUIT */
+.sky.day {
+    background: linear-gradient(to top, #a0d8ff, #ffe9b5);
+}
+.sky.night {
+    background: linear-gradient(to top, #0a0b25, #1a1a40);
+}
+
+/* ☀️🌙 ASTRES */
+.celestial {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: left 1s linear, top 1s linear;
+    z-index: 2;
+}
+.sun {
+    background: radial-gradient(circle, #fff08c 0%, #ffd700 80%);
+    box-shadow: 0 0 40px #ffd700;
+}
+.moon {
+    background: radial-gradient(circle, #f0f0ff 0%, #c0c0ff 80%);
+    box-shadow: 0 0 25px #b0b0ff;
+}
+
+/* 🌫️ NUAGES (jour uniquement) */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    opacity: 0.8;
+    filter: blur(2px);
+    animation: cloudMove 80s linear infinite;
+    z-index: 1;
+}
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+}
+.cloud::before {
+    width: 60%;
+    height: 80%;
+    top: -20%;
+    left: 10%;
+}
+.cloud::after {
+    width: 70%;
+    height: 90%;
+    top: -10%;
+    right: 5%;
+}
+
+.cloud1 {
+    top: 100px;
+    left: -150px;
+    width: 140px;
+    height: 50px;
+    animation-delay: 0s;
+}
+.cloud2 {
+    top: 160px;
+    left: -300px;
+    width: 180px;
+    height: 60px;
+    opacity: 0.7;
+    animation-delay: 30s;
+}
+.cloud3 {
+    top: 80px;
+    left: -200px;
+    width: 120px;
+    height: 45px;
+    opacity: 0.6;
+    animation-delay: 55s;
+}
+@keyframes cloudMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(120vw); }
+}
+
+/* ✨ ÉTOILES (nuit uniquement) */
+.stars {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+.star:nth-child(5n) {
+    width: 3px;
+    height: 3px;
+    opacity: 0.9;
+}
+.star:nth-child(2n) { animation-delay: 1s; }
+.star:nth-child(3n) { animation-delay: 2s; }
+
+/* ⭐ Placement aléatoire doux */
+.star:nth-child(1) { top: 5%; left: 10%; }
+.star:nth-child(2) { top: 15%; left: 25%; }
+.star:nth-child(3) { top: 20%; left: 60%; }
+.star:nth-child(4) { top: 25%; left: 80%; }
+.star:nth-child(5) { top: 30%; left: 40%; }
+.star:nth-child(6) { top: 35%; left: 15%; }
+.star:nth-child(7) { top: 40%; left: 70%; }
+.star:nth-child(8) { top: 45%; left: 50%; }
+.star:nth-child(9) { top: 50%; left: 85%; }
+.star:nth-child(10) { top: 55%; left: 20%; }
+
+/* 💑 SCÈNE DU BANC */
+.bench-scene {
+    position: relative;
+    bottom: 10px;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 3;
+}
+
+/* 🪵 Banc */
+.bench {
+    width: 200px;
+    height: 10px;
+    background: #654321;
+    border-radius: 5px;
+    position: relative;
+}
+.bench::before,
+.bench::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 40px;
+    background: #4b2a10;
+    bottom: -40px;
+    border-radius: 3px;
+}
+.bench::before { left: 15px; }
+.bench::after { right: 15px; }
+
+/* 👩‍❤️‍👨 Personnes */
+.person {
+    position: absolute;
+    bottom: 10px;
+    width: 20px;
+    height: 40px;
+    background: #2c2c2c;
+    border-radius: 10px 10px 3px 3px;
+    transform-origin: bottom center;
+}
+.person::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #2c2c2c;
+    border-radius: 50%;
+    top: -22px;
+    left: -2.5px;
+}
+.left-person { left: calc(50% - 38px); }
+.right-person { left: calc(50% + 18px); }
+
+/* 💕 Cœurs flottants */
+.hearts {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: pink;
+    transform: rotate(45deg);
+    animation: float 3s ease-in infinite;
+    opacity: 0.7;
+}
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: pink;
+    border-radius: 50%;
+}
+.heart::before { top: -5px; left: 0; }
+.heart::after { left: -5px; top: 0; }
+
+.heart:nth-child(1) { left: -20px; animation-delay: 0s; }
+.heart:nth-child(2) { left: 0; animation-delay: 1s; }
+.heart:nth-child(3) { left: 20px; animation-delay: 2s; }
+
+@keyframes float {
+    0% { transform: rotate(45deg) translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: rotate(45deg) translateY(-60px) scale(1.3); opacity: 0; }
+}
