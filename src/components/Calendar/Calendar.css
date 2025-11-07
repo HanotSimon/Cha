@@ -87,9 +87,10 @@
 }
 
 /* Responsive téléphone */
+/* Responsive téléphone */
 @media (max-width: 480px) {
     .calendar-container {
-        padding: 25px 15px;
+        padding: 20px 10px; /* réduit padding horizontal */
         border-radius: 20px;
     }
 
@@ -101,12 +102,15 @@
     .calendar-time {
         flex-direction: column; /* une seule colonne */
         gap: 12px;
+        align-items: center;    /* centre les time-box */
     }
 
     .time-box {
-        width: 100%;
-        max-width: 250px;
+        width: 100%;          /* prend toute la largeur disponible */
+        max-width: 250px;     /* limite pour ne pas être trop large */
+        box-sizing: border-box; /* inclut le padding dans la largeur */
         padding: 15px 10px;
+        min-width: unset;     /* supprime le min-width qui force le débordement */
     }
 
     .time-number {

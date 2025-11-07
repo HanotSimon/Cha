@@ -92,7 +92,16 @@
     z-index: 100;
     text-align: center;
     animation: popIn 1s ease forwards;
+    width: 90%;
 }
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .celebrate-message {
+        display: none;
+    }
+}
+
 
 @keyframes popIn {
     0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }

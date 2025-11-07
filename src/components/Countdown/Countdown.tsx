@@ -13,9 +13,9 @@ const Countdown: React.FC = () => {
     const [targetDate, setTargetDate] = useState<string>(() => {
         const saved = localStorage.getItem("targetDate");
         if (saved) return saved;
-        const today = new Date();
-        today.setHours(today.getHours() + 1);
-        return today.toISOString().slice(0, 16);
+        const defaultDate = new Date("2025-12-23T07:55:00");
+        defaultDate.setHours(defaultDate.getHours() + 1);
+        return defaultDate.toISOString().slice(0, 16);
     });
 
 
