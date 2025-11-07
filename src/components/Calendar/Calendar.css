@@ -1,5 +1,5 @@
 .calendar-container {
-    width: 700px; /* un peu plus large pour tout tenir */
+    width: 700px;
     background: rgba(40, 35, 60, 0.35);
     backdrop-filter: blur(14px);
     border-radius: 30px;
@@ -26,10 +26,10 @@
 
 .calendar-time {
     display: flex;
-    justify-content: center; /* centre horizontalement */
-    align-items: center;     /* aligne verticalement */
-    gap: 25px;               /* espace régulier entre les blocs */
-    flex-wrap: nowrap;       /* empêche le wrapping horizontal */
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: nowrap;
 }
 
 .time-box {
@@ -39,7 +39,7 @@
     min-width: 100px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 18px;
-    padding: 20px 15px; /* un peu plus de padding pour l'horizontal */
+    padding: 20px 15px;
     box-shadow: 0 0 15px rgba(130, 90, 200, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -50,7 +50,7 @@
 }
 
 .time-number {
-    font-size: 2.4rem; /* légèrement plus grand pour horizontal */
+    font-size: 2.4rem;
     font-weight: 800;
     color: #a78bfa;
     text-shadow: 0 0 6px rgba(167, 139, 250, 0.5);
@@ -69,19 +69,56 @@
     font-style: italic;
 }
 
-/* Responsive */
+/* Responsive tablette */
 @media (max-width: 768px) {
     .calendar-container {
-        width: 90%; /* s’adapte aux écrans plus petits */
+        width: 90%;
         padding: 30px 20px;
     }
 
     .calendar-time {
-        flex-wrap: wrap; /* sur mobile, permet de passer à 2 lignes */
+        flex-wrap: wrap;
         gap: 15px;
     }
 
     .time-number {
         font-size: 2rem;
+    }
+}
+
+/* Responsive téléphone */
+@media (max-width: 480px) {
+    .calendar-container {
+        padding: 25px 15px;
+        border-radius: 20px;
+    }
+
+    .calendar-title {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+    }
+
+    .calendar-time {
+        flex-direction: column; /* une seule colonne */
+        gap: 12px;
+    }
+
+    .time-box {
+        width: 100%;
+        max-width: 250px;
+        padding: 15px 10px;
+    }
+
+    .time-number {
+        font-size: 1.8rem;
+    }
+
+    .time-label {
+        font-size: 0.9rem;
+    }
+
+    .calendar-footer {
+        font-size: 0.9rem;
+        margin-top: 20px;
     }
 }

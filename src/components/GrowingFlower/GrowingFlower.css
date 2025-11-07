@@ -14,10 +14,34 @@
     height: auto;
     opacity: 0;
     transform: scale(0.95);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* plus long pour crossfade */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
 .flower-image.active {
     opacity: 1;
     transform: scale(1.05);
+}
+
+/* Responsive tablette */
+@media (max-width: 768px) {
+    .flower-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Responsive téléphone */
+@media (max-width: 480px) {
+    .flower-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .flower-image {
+        transform: scale(0.9);
+    }
+
+    .flower-image.active {
+        transform: scale(1);
+    }
 }

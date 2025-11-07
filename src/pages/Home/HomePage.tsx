@@ -6,6 +6,7 @@ import GrowingFlower from "@/components/GrowingFlower/GrowingFlower.tsx";
 import FireFlies from "@/components/FireFlies/FireFlies.tsx";
 import Sky from "@/components/Sky/Sky.tsx";
 import Gallery from "@/components/Gallery/Gallery.tsx";
+import Countdown from "@/components/Countdown/Countdown.tsx";
 
 const HomePage = () => {
     return (
@@ -38,6 +39,10 @@ const HomePage = () => {
                 <section id="galery">
                     <Gallery/>
                 </section>
+
+                <div className={"countdown-wrapper"}>
+                    <Countdown/>
+                </div>
 
             </div>
         </>

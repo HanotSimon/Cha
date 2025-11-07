@@ -4,7 +4,7 @@
     max-width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(135deg, #fceef3, #e0f0f7); /* pastel doux, reposant */
+    background: linear-gradient(135deg, #fceef3, #e0f0f7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +18,11 @@
     top: 30px;
     font-family: "Poppins", sans-serif;
     font-size: 2rem;
-    color: #a77ca0; /* rose/pourpre doux et calme */
-    text-shadow: 0 0 8px rgba(167, 124, 160, 0.3); /* effet doux */
+    color: #a77ca0;
+    text-shadow: 0 0 8px rgba(167, 124, 160, 0.3);
     z-index: 10;
     text-align: center;
+    padding: 0 10px;
 }
 
 .floating-image {
@@ -29,8 +30,8 @@
     width: 120px;
     height: 120px;
     object-fit: cover;
-    border-radius: 18px; /* coins doux */
-    box-shadow: 0 6px 15px rgba(160, 160, 160, 0.2); /* ombre légère neutre */
+    border-radius: 18px;
+    box-shadow: 0 6px 15px rgba(160, 160, 160, 0.2);
     opacity: 0.95;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
@@ -39,7 +40,7 @@
 .floating-image:hover {
     z-index: 15;
     transform: scale(1.15);
-    box-shadow: 0 8px 20px rgba(160, 160, 160, 0.35); /* hover doux */
+    box-shadow: 0 8px 20px rgba(160, 160, 160, 0.35);
     opacity: 1;
 }
 
@@ -48,6 +49,52 @@
     bottom: 15px;
     text-align: center;
     font-size: 1rem;
-    color: rgba(120, 120, 120, 0.7); /* gris doux */
+    color: rgba(120, 120, 120, 0.7);
     font-style: italic;
+}
+
+/* Responsive tablette */
+@media (max-width: 768px) {
+    .gallery-title {
+        font-size: 1.6rem;
+        top: 20px;
+    }
+
+    .floating-image {
+        width: 90px;
+        height: 90px;
+        border-radius: 15px;
+    }
+
+    .gallery-footer {
+        font-size: 0.9rem;
+        bottom: 10px;
+    }
+}
+
+/* Responsive téléphone */
+@media (max-width: 480px) {
+    .gallery-container {
+        height: 100dvh; /* s’adapte à la hauteur visible du téléphone */
+        padding: 20px 5px;
+    }
+
+    .gallery-title {
+        font-size: 1.3rem;
+        top: 15px;
+        width: 90%;
+        line-height: 1.3;
+    }
+
+    .floating-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 12px;
+    }
+
+    .gallery-footer {
+        font-size: 0.85rem;
+        bottom: 8px;
+        padding: 0 10px;
+    }
 }
