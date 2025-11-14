@@ -67,11 +67,6 @@ const Sky: React.FC = () => {
                     className="person right-person"
                     style={{ transform: `rotate(${lookAngle / -2}deg)` }}
                 />
-                <div className="hearts">
-                    <span className="heart" />
-                    <span className="heart" />
-                    <span className="heart" />
-                </div>
             </div>
         </div>
     );

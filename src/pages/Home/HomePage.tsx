@@ -7,12 +7,17 @@ import FireFlies from "@/components/FireFlies/FireFlies.tsx";
 import Sky from "@/components/Sky/Sky.tsx";
 import Gallery from "@/components/Gallery/Gallery.tsx";
 import Countdown from "@/components/Countdown/Countdown.tsx";
+import ComplimentGenerator from "@/components/ComplimentGenerator/ComplimentGenerator.tsx";
+import CompatibilityWidget from "@/components/Compatibility/Compatibility.tsx";
+import SurpriseGif from "@/components/SurpriseGif/SurpriseGif.tsx";
 
 const HomePage = () => {
     return (
         <>
             <FireFlies/>
             <Navbar/>
+            <SurpriseGif/>
+
             <div className="home">
                 <header>
                     <h1>Bienvenue sur ton site 🎉</h1>
@@ -24,8 +29,6 @@ const HomePage = () => {
                     </p>
 
                 </header>
-
-                <HeartAnimation/>
 
                 <div className="calendar-wrapper">
                     <Calendar/>
@@ -44,6 +47,15 @@ const HomePage = () => {
                     <Countdown/>
                 </div>
 
+                <div id="compliments" className="compliment-wrapper">
+                    <ComplimentGenerator/>
+                </div>
+
+                <HeartAnimation/>
+
+                <div id="compatibility" className="compatibility-wrapper">
+                    <CompatibilityWidget/>
+                </div>
             </div>
         </>
     )

@@ -133,3 +133,36 @@ input:focus, textarea:focus {
     box-sizing: border-box;
 }
 
+.compliment-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    background: radial-gradient(circle at center, #1c1f26, #0f1115);
+    overflow: hidden;
+}
+
+.compatibility-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #2f1f3e, #3b294f);
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+    .compatibility-wrapper {
+        padding: 2rem 0.5rem;
+    }
+}
+
+
+

@@ -15,10 +15,10 @@ const Navbar = () => {
             </div>
 
             <ul className={`nav-links ${open ? "open" : ""}`}>
-                <li><a href="#">Accueil</a></li>
                 <li><a href="#galery">Galerie</a></li>
-                <li><a href="#messages">Messages</a></li>
-                <li><a href="#surprises">Surprises</a></li>
+                <li><a href="#compliments">Compliments</a></li>
+                <li><a href="#compatibility">Compatibilité</a></li>
+                <li><a href="#" id="surprise-link">Surprise</a></li>
             </ul>
         </nav>
     );

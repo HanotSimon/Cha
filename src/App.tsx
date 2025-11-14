@@ -19,7 +19,6 @@ export default function App() {
     if (isLogged) {
         return (
             <>
-
                 <HomePage />
             </>
         );

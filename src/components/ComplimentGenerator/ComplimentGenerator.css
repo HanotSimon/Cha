@@ -1,0 +1,75 @@
+.title {
+    font-size: 2rem;
+    color: #99b8ff;
+    letter-spacing: 1px;
+    animation: fadeDown 0.8s ease;
+}
+
+.btn {
+    background: #273142;
+    color: #d2e1ff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1rem;
+    border: 1px solid #3d4a5f;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(100, 140, 200, 0.35);
+}
+
+/* floating compliment */
+.compliment {
+    position: absolute;
+    font-size: 1.4rem;
+    color: #d2e1ff;
+
+    padding: 0.7rem 1.3rem;
+    background: rgba(45, 57, 75, 0.55);
+    border-radius: 1rem;
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    animation: floatOut 2.4s ease forwards;
+}
+
+/* Declare variables (IMPORTANT!) */
+.compliment {
+    --x-offset: 0px;
+    --y-offset: 0px;
+}
+
+@keyframes floatOut {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.6);
+    }
+    10% {
+        opacity: 1;
+    }
+    70% {
+        transform: translate(var(--x-offset), var(--y-offset)) scale(1.15);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(var(--x-offset) * 1.4), calc(var(--y-offset) * 1.4))
+        scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
