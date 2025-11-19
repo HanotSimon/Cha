@@ -24,7 +24,8 @@ const compliments = [
     "chiante parfois",
     "bébé cadum",
     "trop 1er degré",
-    "pense toujours avoir raison"
+    "pense toujours avoir raison",
+    "console"
 ];
 
 export default function ComplimentGenerator() {

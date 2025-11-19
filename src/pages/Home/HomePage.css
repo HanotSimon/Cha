@@ -1,13 +1,13 @@
 /* ===== Global Styles ===== */
 body {
     margin: 0;
-    padding-top: 50px;
     background: #ffe6f0; /* rose très clair */
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: #ff3366; /* rose vif pour le texte */
 }
 
 header {
+    padding-top: 50px;
     margin: 50px;
 }
 
@@ -163,6 +163,13 @@ input:focus, textarea:focus {
         padding: 2rem 0.5rem;
     }
 }
+
+.chillforest-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 

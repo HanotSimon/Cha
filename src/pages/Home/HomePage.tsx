@@ -10,6 +10,9 @@ import Countdown from "@/components/Countdown/Countdown.tsx";
 import ComplimentGenerator from "@/components/ComplimentGenerator/ComplimentGenerator.tsx";
 import CompatibilityWidget from "@/components/Compatibility/Compatibility.tsx";
 import SurpriseGif from "@/components/SurpriseGif/SurpriseGif.tsx";
+import { motion } from "framer-motion";
+import ChillForest from "@/ChillForest/ChillForest.tsx";
+import EasterEggConsole from "@/components/EasterEggConsole/EasterEggConsole.tsx";
 
 const HomePage = () => {
     return (
@@ -17,45 +20,129 @@ const HomePage = () => {
             <FireFlies/>
             <Navbar/>
             <SurpriseGif/>
+            <EasterEggConsole/>
 
             <div className="home">
-                <header>
-                    <h1>Bienvenue sur ton site 🎉</h1>
-                    <p>
+
+                {/* HEADER */}
+                <motion.header
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ type: "spring", stiffness: 60, damping: 20 }}
+                >
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ type: "spring", stiffness: 55, damping: 22, delay: 0.2 }}
+                        whileHover={{ scale: 1.04 }}
+                    >
+                        Bienvenue sur ton site 🎉
+                    </motion.h1>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ type: "spring", stiffness: 55, damping: 22, delay: 0.35 }}
+                    >
                         Ce site est un petit site cringe pour toi fait maison.
-                    </p>
-                    <p>
+                    </motion.p>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ type: "spring", stiffness: 55, damping: 22, delay: 0.5 }}
+                        whileHover={{ scale: 1.03, x: 3 }}
+                    >
                         J'ai essayé de faire de mon mieux pour qu'il soit pas trop ignoble :)
-                    </p>
+                    </motion.p>
+                </motion.header>
 
-                </header>
-
-                <div className="calendar-wrapper">
+                {/* GROSSE SECTIONS – simple apparition */}
+                <motion.div
+                    className="calendar-wrapper"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ type: "spring", stiffness: 60, damping: 20 }}
+                >
                     <Calendar/>
                     <GrowingFlower/>
-                </div>
+                </motion.div>
 
-                <div className="sky-wrapper">
-                    <Sky/>
-                </div>
+                <motion.div
+                    className="sky-wrapper"
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true, margin: "-80px"}}
+                    transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.1}}
+                >
+                    <div style={{width: "100%", height: "450px", position: "relative"}}>
+                        <Sky/>
+                    </div>
+                </motion.div>
 
-                <section id="galery">
-                    <Gallery/>
-                </section>
 
-                <div className={"countdown-wrapper"}>
+                <motion.section
+                    id="galery"
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true, margin: "-80px"}}
+                    transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.2}}
+                >
+                <Gallery/>
+                </motion.section>
+
+                <motion.div
+                    className="countdown-wrapper"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.3 }}
+                >
                     <Countdown/>
-                </div>
+                </motion.div>
 
-                <div id="compliments" className="compliment-wrapper">
+                <motion.div
+                    id="compliments"
+                    className="compliment-wrapper"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.4 }}
+                >
                     <ComplimentGenerator/>
-                </div>
+                </motion.div>
 
-                <HeartAnimation/>
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.5 }}
+                >
+                    <HeartAnimation/>
+                </motion.div>
 
-                <div id="compatibility" className="compatibility-wrapper">
+                <motion.div
+                    id="compatibility"
+                    className="compatibility-wrapper"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.6 }}
+                >
                     <CompatibilityWidget/>
-                </div>
+                </motion.div>
+
+                <motion.div
+                    id="chillforest"
+                    className="chillforest-wrapper"
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true, margin: "-80px"}}
+                    transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.6}}
+                >
+                    <ChillForest/>
+                </motion.div>
             </div>
         </>
     )

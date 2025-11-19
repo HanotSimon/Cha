@@ -1,0 +1,155 @@
+.easter-egg-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe6f0, #fff0d9, #ffd6e8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+}
+
+/* Ticket */
+.ticket-card {
+    width: 400px;
+    max-width: 90%;
+    background: linear-gradient(145deg, #fff0f5, #ffe5e0);
+    border-radius: 25px;
+    border: 3px dashed #ff6f91;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    text-align: center;
+    padding: 30px 20px;
+    z-index: 2;
+    position: relative;
+    animation: ticketPop 0.7s ease forwards;
+}
+
+@keyframes ticketPop {
+    0% { transform: scale(0.5) rotate(-5deg); opacity: 0; }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.ticket-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff4b78;
+    padding-bottom: 15px;
+    border-bottom: 3px dashed #ff6f91;
+}
+
+.ticket-body {
+    padding: 25px 10px;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: #5a3e36;
+}
+
+.ticket-footer {
+    padding: 12px 0;
+    font-size: 1rem;
+    color: #8b5e3c;
+    border-top: 3px dashed #ff6f91;
+}
+
+/* Print button */
+.print-btn {
+    margin-top: 30px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    background: #ff6f91;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.print-btn:hover {
+    background: #ff4b78;
+    transform: scale(1.08);
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: translateY(-50px) scale(1); opacity: 0; }
+}
+
+/* Confetti */
+#confetti-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.confetti {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    top: -10px;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Stars */
+#stars-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #f13fd9;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+/* Print media */
+@media print {
+    body * { visibility: hidden; }
+    .easter-egg-wrapper, .easter-egg-wrapper * { visibility: visible; }
+    .easter-egg-wrapper { position: absolute; top: 0; left: 0; width: 100%; background: white; }
+    #confetti-container, #stars-container, .print-btn { display: none; }
+}
+
+/* Texte caché */
+.hidden-message {
+    display: block;
+    margin-top: 15px;
+    color: #ff4b78;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(10px);
+    cursor: pointer;
+}
+
+/* Apparition au survol */
+.ticket-body:hover .hidden-message {
+    opacity: 1;
+    transform: translateY(0);
+}
