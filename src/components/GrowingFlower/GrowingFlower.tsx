@@ -24,7 +24,10 @@ export default function GrowingFlower() {
     useEffect(() => {
         const updateMaxStage = () => {
             const now = new Date().getTime();
-            const diffDays = (now - startDate.getTime()) / (1000 * 60 * 60 * 24);
+            const diffDays = Math.max(
+                0,
+                (now - startDate.getTime()) / (1000 * 60 * 60 * 24)
+            );
             const stage = Math.min(Math.floor((diffDays / 365) * flowerStages.length), flowerStages.length - 1);
             setMaxStage(stage);
         };
@@ -38,7 +41,7 @@ export default function GrowingFlower() {
     useEffect(() => {
         if (maxStage === 0) return;
 
-        let timeout: NodeJS.Timeout;
+        let timeout: ReturnType<typeof setTimeout>;
         let frame = 0; // commence au stade 0
 
         const tick = () => {

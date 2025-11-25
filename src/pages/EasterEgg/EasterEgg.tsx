@@ -1,8 +1,21 @@
 import "./EasterEgg.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function EasterEgg() {
+    const [foundDate, setFoundDate] = useState("");
+
     useEffect(() => {
+        let stored = localStorage.getItem("easterEggFoundDate");
+
+        if (!stored) {
+            stored = new Date().toLocaleDateString();
+
+            localStorage.setItem("easterEggFoundDate", stored);
+        }
+
+        setFoundDate(stored);
+
+        // CONFETTI
         const confettiContainer = document.getElementById("confetti-container")!;
         const confettiCount = 150;
 
@@ -17,8 +30,10 @@ export default function EasterEgg() {
             confettiContainer.appendChild(confetti);
         }
 
+        // STARS
         const starsContainer = document.getElementById("stars-container")!;
         const starsCount = 50;
+
         for (let i = 0; i < starsCount; i++) {
             const star = document.createElement("div");
             star.className = "star";
@@ -35,15 +50,15 @@ export default function EasterEgg() {
             <div id="stars-container"></div>
 
             <div className="ticket-card">
-                <div className="ticket-header">
-                    Bon pour rien du tout 🎁
-                </div>
+                <div className="ticket-header">Bon pour rien du tout 🎁</div>
                 <div className="ticket-body">
                     Ce ticket donne droit à rien du tout mais bien joué de l'avoir trouvé.
-                    <span className="hidden-message">Mais ça peut être un bon pour un bisou allez :)</span>
+                    <span className="hidden-message">
+                        Mais ça peut être un bon pour un bisou allez :)
+                    </span>
                 </div>
                 <div className="ticket-footer">
-                    Trouvé le : {new Date().toLocaleDateString()}
+                    Trouvé le : {foundDate}
                 </div>
             </div>
         </div>

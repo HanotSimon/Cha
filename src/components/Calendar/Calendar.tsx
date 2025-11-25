@@ -47,7 +47,7 @@ const Calendar = () => {
 
     return (
         <div className="calendar-container">
-            <h2 className="calendar-title">💞 Depuis notre rencontre 💞</h2>
+            <h2 className="calendar-title">Ensemble depuis :</h2>
             <div className="calendar-time">
                 <div className="time-box">
                     <span className="time-number">{timePassed.months}</span>

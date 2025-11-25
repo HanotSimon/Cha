@@ -25,7 +25,7 @@ const compliments = [
     "bébé cadum",
     "trop 1er degré",
     "pense toujours avoir raison",
-    "console"
+    "CONSOLE (indice)"
 ];
 
 export default function ComplimentGenerator() {

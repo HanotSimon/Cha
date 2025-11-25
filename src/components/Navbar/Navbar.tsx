@@ -7,7 +7,11 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="logo">
-                <a href="#">💖 Mon Cœur 💖</a>
+                <a href="#">💖 Cha 💖</a>
+            </div>
+
+            <div className="hidden-message">
+                <p>monCop1LePluBo()</p>
             </div>
 
             <div className="menu-toggle" onClick={() => setOpen(!open)}>

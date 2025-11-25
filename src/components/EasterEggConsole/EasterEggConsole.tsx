@@ -12,10 +12,8 @@ export default function EasterEggConsole() {
         w.monCop1LePluBo = () => {
             console.log("✨ Commande activée !");
 
-            // Supprime tout le contenu actuel de la page
             document.body.innerHTML = "";
 
-            // Crée un container pour le composant
             const rootDiv = document.createElement("div");
             document.body.appendChild(rootDiv);
 

@@ -11,7 +11,7 @@ import ComplimentGenerator from "@/components/ComplimentGenerator/ComplimentGene
 import CompatibilityWidget from "@/components/Compatibility/Compatibility.tsx";
 import SurpriseGif from "@/components/SurpriseGif/SurpriseGif.tsx";
 import { motion } from "framer-motion";
-import ChillForest from "@/ChillForest/ChillForest.tsx";
+import ChillForest from "@/components/ChillForest/ChillForest.tsx";
 import EasterEggConsole from "@/components/EasterEggConsole/EasterEggConsole.tsx";
 
 const HomePage = () => {

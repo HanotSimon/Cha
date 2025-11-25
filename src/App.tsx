@@ -4,7 +4,7 @@ import { useState } from "react";
 import "@/index.css";
 
 export default function App() {
-    const [isLogged, setIsLogged] = useState(true);
+    const [isLogged, setIsLogged] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     const handleLogin = (answer: string) => {
