@@ -16,7 +16,7 @@ export default function SurpriseGif() {
             try {
                 const apiKey = "OewCxZDpuV0qvBXvZH8Lesxt3RF0C6yn"; // ta clé Giphy
                 const response = await fetch(
-                    `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=loves&rating=g`
+                    `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}&tag=funny&rating=g`
                 );
                 const data = await response.json();
 
