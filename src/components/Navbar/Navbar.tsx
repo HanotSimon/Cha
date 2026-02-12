@@ -23,6 +23,7 @@ const Navbar = () => {
                 <li><a href="#compliments">Compliments</a></li>
                 <li><a href="#compatibility">Compatibilité</a></li>
                 <li><a href="#" id="surprise-link">Surprise</a></li>
+                <li><a href="#saint-valentin">Saint-Valentin 💘</a></li>
             </ul>
         </nav>
     );

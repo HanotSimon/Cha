@@ -108,28 +108,27 @@ const Countdown: React.FC = () => {
             {celebrate && (
                 <>
                     <div className="celebrate-message">
-                        Yeaah enfin ensemble ! 🎉
+                    Yeaah enfin ensemble ! 🎉
                     </div>
+
                     <div className="hearts-container">
-                        {Array.from({ length: 50 }).map((_, i) => (
-                            <span
-                                key={i}
-                                className="heart"
-                                style={{
-                                    left: `${Math.random() * 100}%`,
-                                    animationDuration: `${2 + Math.random() * 3}s`,
-                                    fontSize: `${16 + Math.random() * 24}px`,
-                                    animationDelay: `${Math.random() * 2}s`,
-                                }}
-                            >
-                    💖
-                </span>
-                        ))}
+                    {Array.from({ length: 5 }).map((_, i) => (
+                        <span
+                        key={i}
+                        className="heart"
+                        style={{
+                            left: `${i * 20 + 10}%`,
+                            animationDuration: `${15 + i * 2}s`,
+                            fontSize: `${30}px`,
+                            animationDelay: `${i * 1.5}s`,
+                        }}
+                        >
+                        💖
+                        </span>
+                    ))}
                     </div>
                 </>
             )}
-
-
         </div>
     );
 };

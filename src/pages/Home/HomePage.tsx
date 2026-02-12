@@ -13,6 +13,7 @@ import SurpriseGif from "@/components/SurpriseGif/SurpriseGif.tsx";
 import { motion } from "framer-motion";
 import ChillForest from "@/components/ChillForest/ChillForest.tsx";
 import EasterEggConsole from "@/components/EasterEggConsole/EasterEggConsole.tsx";
+import SaintValentin from "@/components/SaintValentin/SaintValentin.tsx";
 
 const HomePage = () => {
     return (
@@ -139,9 +140,20 @@ const HomePage = () => {
                     initial={{opacity: 0, y: 40}}
                     whileInView={{opacity: 1, y: 0}}
                     viewport={{once: true, margin: "-80px"}}
-                    transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.6}}
+                    transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.7}}
                 >
                     <ChillForest/>
+                </motion.div>
+
+                <motion.div
+                    id="saint-valentin"
+                    className="saint-valentin-wrapper"
+                    initial={{opacity: 0, y: 40}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true, margin: "-80px"}}
+                    transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.8}}
+                >
+                    <SaintValentin/>
                 </motion.div>
             </div>
         </>

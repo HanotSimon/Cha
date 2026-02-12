@@ -8,7 +8,7 @@ export default function App() {
     const [error, setError] = useState<string | null>(null);
 
     const handleLogin = (answer: string) => {
-        if (answer == "01-05-2025") {
+        if (answer == "01-05-2025" || "01052025" || "caca") {
             setIsLogged(true);
         } else {
             setError("Mauvaise réponse, t'es bête ou quoi ??");
