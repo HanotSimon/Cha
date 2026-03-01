@@ -12,7 +12,7 @@ export default function App() {
     const month = today.getMonth() + 1;
     const day = today.getDate();
 
-    const isBirthday = month === 3 && day === 1;
+    const isBirthday = month === 2 && day === 28;
 
     const handleLogin = (answer: string) => {
         if (answer == "01-05-2025" || "01052025" || "caca") {
