@@ -1,5 +1,7 @@
 .anniversaire-container {
   position: relative;
+  z-index: 9999; /* <-- au-dessus de tout */
+  pointer-events: none; /* permet à la galerie derrière de recevoir les events */
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -81,7 +83,7 @@
   animation: pulseBtn 1.5s infinite;
 }
 
-.floating-image {
+.floating-images {
   position: absolute;
   width: 150px;
   height: 150px;

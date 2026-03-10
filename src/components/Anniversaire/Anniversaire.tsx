@@ -74,7 +74,7 @@ const Anniversaire: React.FC = () => {
         <img
           key={index}
           src={img.src}
-          className="floating-image"
+          className="floating-images"
           style={{ left: `${img.left}%`, top: `${img.top}%` }}
           alt="surprise"
         />

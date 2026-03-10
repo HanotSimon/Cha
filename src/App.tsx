@@ -15,7 +15,7 @@ export default function App() {
     const isBirthday = month === 2 && day === 28;
 
     const handleLogin = (answer: string) => {
-        if (answer == "01-05-2025" || "01052025" || "caca") {
+        if (answer == "01-05-2025" || answer == "01052025" || answer == "caca") {
             setIsLogged(true);
         } else {
             setError("Mauvaise réponse, t'es bête ou quoi ??");
