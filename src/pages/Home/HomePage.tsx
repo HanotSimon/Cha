@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import ChillForest from "@/components/ChillForest/ChillForest.tsx";
 import EasterEggConsole from "@/components/EasterEggConsole/EasterEggConsole.tsx";
 import SaintValentin from "@/components/SaintValentin/SaintValentin.tsx";
+import Timeline from "@/components/TimeLine/TImeLine.tsx";
 
 const HomePage = () => {
     return (
@@ -154,6 +155,18 @@ const HomePage = () => {
                     transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.8}}
                 >
                     <SaintValentin/>
+                </motion.div>
+
+                <motion.div
+                    id="timeline"
+                    className="timeline-wrapper"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{type: "spring", stiffness: 60, damping: 20, delay: 0.8,
+                    }}
+                >
+                    <Timeline />
                 </motion.div>
             </div>
         </>
